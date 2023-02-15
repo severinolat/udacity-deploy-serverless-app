@@ -78,21 +78,11 @@ functions:
       - Effect: Allow
         Action:
           - dynamodb:Query
-          - dynamodb:Scan
           - dynamodb:GetItem
         Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}/*
       - Effect: Allow
         Action:
-          - xray:GetSamplingRules
-          - xray:GetSamplingTargets
-          - xray:GetSamplingStatisticSummaries
-          - xray:BatchGetTraces
-          - xray:GetServiceGraph
-          - xray:GetTraceGraph
-          - xray:GetTraceSummaries
-          - xray:GetGroups
-          - xray:GetGroup
-          - xray:PutTraceSegments
+          - xray:*
         Resource:
           - '*'
 
@@ -125,16 +115,7 @@ functions:
         Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
       - Effect: Allow
         Action:
-          - xray:GetSamplingRules
-          - xray:GetSamplingTargets
-          - xray:GetSamplingStatisticSummaries
-          - xray:BatchGetTraces
-          - xray:GetServiceGraph
-          - xray:GetTraceGraph
-          - xray:GetTraceSummaries
-          - xray:GetGroups
-          - xray:GetGroup
-          - xray:PutTraceSegments
+          - xray:*
         Resource:
           - '*'
 
@@ -163,16 +144,7 @@ functions:
         Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
       - Effect: Allow
         Action:
-          - xray:GetSamplingRules
-          - xray:GetSamplingTargets
-          - xray:GetSamplingStatisticSummaries
-          - xray:BatchGetTraces
-          - xray:GetServiceGraph
-          - xray:GetTraceGraph
-          - xray:GetTraceSummaries
-          - xray:GetGroups
-          - xray:GetGroup
-          - xray:PutTraceSegments
+          - xray:*
         Resource:
           - '*'
 
@@ -192,20 +164,10 @@ functions:
         Action:
           - dynamodb:DeleteItem
           - dynamodb:GetItem
-          - dynamodb:Query
         Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
       - Effect: Allow
         Action:
-          - xray:GetSamplingRules
-          - xray:GetSamplingTargets
-          - xray:GetSamplingStatisticSummaries
-          - xray:BatchGetTraces
-          - xray:GetServiceGraph
-          - xray:GetTraceGraph
-          - xray:GetTraceSummaries
-          - xray:GetGroups
-          - xray:GetGroup
-          - xray:PutTraceSegments
+          - xray:*
         Resource:
           - '*'
 
@@ -232,16 +194,7 @@ functions:
         Resource: arn:aws:s3:::${self:provider.environment.ATTACHMENT_S3_BUCKET}/*
       - Effect: Allow
         Action:
-          - xray:GetSamplingRules
-          - xray:GetSamplingTargets
-          - xray:GetSamplingStatisticSummaries
-          - xray:BatchGetTraces
-          - xray:GetServiceGraph
-          - xray:GetTraceGraph
-          - xray:GetTraceSummaries
-          - xray:GetGroups
-          - xray:GetGroup
-          - xray:PutTraceSegments
+          - xray:*
         Resource:
           - '*'
 
